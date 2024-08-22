@@ -1,0 +1,872 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="GarlicBa">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="git的开发教程什么是gitgit是一个 分布式版本控制系统 ，其实我也不懂，反正只需明白 通过git的一系列指令使我们的项目开发更加方便，项目合作开发更加便利。github听过把，大名鼎鼎的 源代码托管平台，就是用git来管理他们的网站的。  如果你以后从事编程开发，百分百绕不开git。如果你想去github上找点有意思的项目，也得了解了解git趴。 当然，git是课外需要学的，如果你不是计科专">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git教程">
+<meta property="og:url" content="http://example.com/2024/08/20/git%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="GarlicBa的个人博客">
+<meta property="og:description" content="git的开发教程什么是gitgit是一个 分布式版本控制系统 ，其实我也不懂，反正只需明白 通过git的一系列指令使我们的项目开发更加方便，项目合作开发更加便利。github听过把，大名鼎鼎的 源代码托管平台，就是用git来管理他们的网站的。  如果你以后从事编程开发，百分百绕不开git。如果你想去github上找点有意思的项目，也得了解了解git趴。 当然，git是课外需要学的，如果你不是计科专">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2024/08/20/git%E6%95%99%E7%A8%8B/4982f69711dac4c20aa2ad8c5d79af24.gif">
+<meta property="article:published_time" content="2024-08-20T11:30:56.000Z">
+<meta property="article:modified_time" content="2024-08-20T13:54:20.009Z">
+<meta property="article:author" content="GarlicBa">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="github">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2024/08/20/git%E6%95%99%E7%A8%8B/4982f69711dac4c20aa2ad8c5d79af24.gif">
+  
+  
+  
+  <title>git教程 - GarlicBa的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"StWSJQe2EBdFggyVEjAZSL0e-gzGzoHsz","app_key":"tk9rWYVaDo4nzIxKRjTBfTD5","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>GarlicBa</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/1724070568747.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="git教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-20 19:30" pubdate>
+          2024年8月20日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">git教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="git的开发教程"><a href="#git的开发教程" class="headerlink" title="git的开发教程"></a>git的开发教程</h1><h2 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git"></a>什么是git</h2><p>git是一个 <strong>分布式版本控制系统</strong> ，其实我也不懂，反正只需明白 <strong>通过git的一系列指令使我们的项目开发更加方便，项目合作开发更加便利</strong>。github听过把，大名鼎鼎的 <strong>源代码托管平台</strong>，就是用git来管理他们的网站的。</p>
+<blockquote>
+<p>如果你以后从事编程开发，百分百绕不开git。如果你想去github上找点有意思的项目，也得了解了解git趴。</p>
+<p>当然，git是课外需要学的，如果你不是计科专业这种科班专业，放心好了，课内是用不到git的😘</p>
+</blockquote>
+<hr>
+<h2 id="学习git"><a href="#学习git" class="headerlink" title="学习git"></a>学习git</h2><p>这边推荐一个csdn教程把，看这一篇就够了。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bjbz_cxy/article/details/116703787?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522172397335216800211588477%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=172397335216800211588477&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-116703787-null-null.142%5Ev100%5Epc_search_result_base5&utm_term=git&spm=1018.2226.3001.4187">关于Git这一篇就够了</a></p>
+<p>当然，官网也肯定可以学:<a target="_blank" rel="noopener" href="https://git-scm.com/">git</a></p>
+<hr>
+<h2 id="思路问题整理"><a href="#思路问题整理" class="headerlink" title="思路问题整理"></a>思路问题整理</h2><p>虽然真正操作过程中要使用的语句只是那么几个，但我是真的没搞懂，以至于每次上传到github都卡壳（），卡好久。。</p>
+<p><strong>是时候该真正搞懂了！！！</strong></p>
+<p><img src="/2024/08/20/git%E6%95%99%E7%A8%8B/4982f69711dac4c20aa2ad8c5d79af24.gif" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="1-一些语句到底是什么意思"><a href="#1-一些语句到底是什么意思" class="headerlink" title="1. 一些语句到底是什么意思"></a>1. 一些语句到底是什么意思</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git add .<br></code></pre></td></tr></table></figure>
+
+<p>git add &lt;文件&gt;操作是把选中的文件,存放到git的缓存区。</p>
+<blockquote>
+<p>注意，后面commit的时候，提交的就是缓存区的内容。</p>
+<p>如果git add test.c ，再修改test.c，再commit，提交的内容还是原来的内容，修改是无效的。</p>
+</blockquote>
+<p>而git add . 是将所有改动的文件提交到暂存区。 <em><strong>未改动的不存也不需要存，因为本地仓库一模一样有。</strong></em></p>
+<blockquote>
+<p>改动怎么理解？就是判断现在的文件内容和本地仓库文件内容是否一致。</p>
+<p>增加文件✔ 修改文件 ✔ 删除文件呢？</p>
+<p>tips：这里的修改，如果是把文件内的a改成b，是<strong>不需要手动解决冲突</strong>的，commit的结果全全按照我们修改后的，可以理解为将原文件覆盖掉。</p>
+</blockquote>
+<p><strong>删除文件：</strong></p>
+<p><strong>原来有，现在没，那也是改动！！！</strong> 所以✔</p>
+<blockquote>
+<p>当我们在本地删除一个文件后，文件在物理意义上消失了，而后通过git add .命令，把<strong>删除</strong>这个操作储存在缓存区，我们在commit后，该文件就在本地仓库消失辣！！</p>
+<p>但是文件的历史记录仍然可以在之前的提交中找到，除非进行了强制重置或删除了那些提交。</p>
+</blockquote>
+<p>所以，**<code>git add .</code>就是个万能公式，什么情况下都可以用！**</p>
+<hr>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git status<br></code></pre></td></tr></table></figure>
+
+<p>对比当前文件状态与本地仓库中的数据是否一样，是否发生改动。</p>
+<hr>
+<p>综上，经过万能的三步，本地仓库是可以与我们的项目统一的。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git status<br>git add .<br>git commit <span class="hljs-literal">-m</span><span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<p>然后就是 <strong>本地仓库与github远程仓库的连接</strong>了</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git remote add origin &lt;远程仓库链接&gt;<br></code></pre></td></tr></table></figure>
+
+<p>origin代表远程仓库，就这么用就行</p>
+<hr>
+<p>然后用git push 推送到远程</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git push <span class="hljs-literal">-u</span> origin master<br></code></pre></td></tr></table></figure>
+
+<p>push表示将本地仓库与远程仓库进行<strong>合并</strong></p>
+<p>-u：将本地仓库分支与远程仓库分支一起合并，就是说将master的分支也提交上去，这样你就可以在远程仓库上看到你在本地仓库的master中创建了多少分支，不加这个参数只将当前的master与远程的合并，没有分支的历史记录，也不能切换分支。<strong>就第一次push的时候用一次就行，后面可以去掉</strong> </p>
+<p>以后用这个就行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git push origin master<br></code></pre></td></tr></table></figure>
+
+
+
+<p>master表示提交本地master分支仓库。远程仓库也会因此创建一个master分支，因为创建远程仓库默认是main分支。</p>
+<p>推送后，即可在远程仓库看到我们的项目~</p>
+<hr>
+<h4 id="合并是什么意思！！！"><a href="#合并是什么意思！！！" class="headerlink" title="合并是什么意思！！！"></a>合并是什么意思！！！</h4><ol>
+<li><p>如果本地仓库多一个文件，就在远程新加一个。</p>
+</li>
+<li><p>如果本地仓库修改呢？</p>
+<ul>
+<li><p>在原来基础上添加内容，那么git会自动帮助我们合并结果。</p>
+</li>
+<li><p>在原来基础上把a改成b，需要 <strong>手动解决冲突</strong>！！！</p>
+</li>
+<li><p>在原来基础上删减掉一些东西呢？如果取交集的话，那不是还在吗?   答案是 <strong>不会！！</strong> 远程仓库会和本地仓库同步。</p>
+</li>
+</ul>
+</li>
+<li><p>如果本地仓库删除一个文件，同理可得，远程仓库会和本地仓库同步。即 <strong>远程仓库也会删除</strong></p>
+</li>
+</ol>
+<p>总结一下，多了就用我们本地的，少了就遵循我们本地的删掉，修改了，那就需要手动解决冲突。</p>
+<p>所以，只要注意  <strong>不是替换的情况下，可以直接推到远程仓库！！！</strong> </p>
+<p>但更多的时候，我会是替换，所以需要 <strong>手动解决冲突</strong>。</p>
+<hr>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git branch<br></code></pre></td></tr></table></figure>
+
+<p>查看当前所有分支</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git branch &lt;分支名&gt;<br></code></pre></td></tr></table></figure>
+<p>创建分支</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git checkout &lt;分支名&gt;<br></code></pre></td></tr></table></figure>
+
+<p>切换分支</p>
+<hr>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git merge<br></code></pre></td></tr></table></figure>
+
+<p>切换到master，并合并其他分支。都是用master分支进行提交的。<strong>可以减少分支，瘦身嘛</strong></p>
+<p>因为一个项目可能有多个人进行开发，分别负责各自部分，开发完毕后，会合并到总分支，并通过总分支进行提交，提交到远程仓库。</p>
+<p><em>这里会有个新问题，当你在push到远程仓库时，其他伙伴可能先你一步，所有远程仓库和你现有的不同步，所以你需要<strong>git pull</strong>，这里就是后话了。后面会讲到。</em></p>
+<blockquote>
+<p>思考思考，我们从远程拉取master分支，我们又新建一个分支，并在这个分支开发，开发完毕后，进行合并，和上面讲的合并类似，可能需要手动解决冲突，解决后，再上传到本地仓库。再通过master分支push到远端。（因为本地已经合并过了，所以不需要把其他分支进行上传，所以也就不需要—u了，有没有绕清楚？嘻嘻）</p>
+</blockquote>
+<hr>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git pull<br></code></pre></td></tr></table></figure>
+
+<p>上面有讲到，如果远程仓库有修改，push是会失效的，我们得先pull，拉取，然后再进行上传。具体在<code>3</code>中会考虑到。</p>
+<hr>
+<h3 id="2-如何手动解决冲突"><a href="#2-如何手动解决冲突" class="headerlink" title="2.如何手动解决冲突"></a>2.如何手动解决冲突</h3><ol>
+<li><p><strong>检出冲突文件</strong>：首先，Git会在合并过程中识别出冲突的文件，并在终端中告诉你哪些文件存在冲突。</p>
+</li>
+<li><p><strong>打开冲突文件</strong>：打开显示冲突的文件，Git会在冲突区域插入特殊的标记，让你知道哪里存在问题。</p>
+</li>
+<li><p><strong>查看冲突标记</strong>：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs abnf">plaintext<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>// 你的本地更改<br><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><br>// 远程仓库的更改<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;remote-branch&gt;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编辑文件</strong>：决定你想要保留哪些更改。你可能需要保留一方的更改、结合双方的更改，或者完全重写冲突的部分。</p>
+</li>
+<li><p><strong>删除冲突标记</strong>：在编辑过程中，删除上述的Git冲突标记，确保文件中不再包含这些标记。</p>
+</li>
+<li><p><strong>保存文件</strong>：在解决了所有冲突并满意你的更改后，保存文件。</p>
+<blockquote>
+<p>注意解决冲突时，如果全部选择当前的代码，保存后，再次提交，就不会产生冲突，因为git已经记住了你的“决定”。</p>
+<p>如果你推送解决冲突后的更改到远程仓库，而其他开发者拉取这些更改并再次合并，他们不会遇到同样的冲突，因为你已经解决了它。</p>
+</blockquote>
+</li>
+<li><p><strong>添加到暂存区</strong>：使用<code>git add</code>命令将解决了冲突的文件添加到暂存区：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>git add &lt;解决冲突后的文件名&gt;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>完成合并</strong>：一旦解决了所有冲突并且将更改的文件添加到暂存区，你可以继续完成合并过程，通过提交更改来结束合并操作：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>git commit <span class="hljs-literal">-m</span> <span class="hljs-string">&quot;解决合并冲突&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>推送更改</strong>：解决完冲突并提交后，你可以将解决冲突后的更改推送到远程仓库：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>git push origin master<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用工具辅助</strong>：有些集成开发环境（IDE）或文本编辑器提供了图形界面来辅助解决合并冲突，这些工具可以更容易地比较和编辑冲突的文本。</p>
+</li>
+</ol>
+<hr>
+<h3 id="3-远程仓库修改了怎么办？"><a href="#3-远程仓库修改了怎么办？" class="headerlink" title="3.远程仓库修改了怎么办？"></a>3.远程仓库修改了怎么办？</h3><p>要先拉取pull。</p>
+<p>git pull的原理就是把远程仓库的最新更改和你当前的本地仓库进行<strong>合并</strong>。</p>
+<blockquote>
+<p>如果你添加了一个md文件，pull一下，你的本地也会增加一个md文件，其他文件都保持不变</p>
+<p>当然，也避免不了手动解决冲突问题</p>
+<p>如果你在本地做了一些更改，并且这些更改不会与远程分支的更改冲突，<code>git pull</code>通常可以保留你的本地更改。</p>
+</blockquote>
+<hr>
+<h3 id="4-建立分支是怎么个事"><a href="#4-建立分支是怎么个事" class="headerlink" title="4. 建立分支是怎么个事"></a>4. 建立分支是怎么个事</h3><ol>
+<li>自己分支干的事，不会影响到其他分支。 其他分支不相信你doge，觉得你不靠谱😏</li>
+<li>在分支上开发，可以让自己大胆尝试自己的想法，而不用担心影响整体代码哦。</li>
+<li>在master开发和在分支开发并进行合并，结果是一样的呀。虽然更烦了，但是更推荐。</li>
+</ol>
+<h3 id="5-如果把-git删了怎么办"><a href="#5-如果把-git删了怎么办" class="headerlink" title="5. 如果把.git删了怎么办"></a>5. 如果把<code>.git</code>删了怎么办</h3><p>你的Git仓库的版本控制信息将会丢失，因为<code>.git</code>文件夹是存储版本控制信息的核心。</p>
+<p>被删了，说明本地仓库没了，和远程仓库的连接也没了。</p>
+<p>那就<code>init</code>一个新的<code>.git</code>,再建一个本地仓库，再把数据上传到本地仓库，再和远程仓库连接一下，不就恢复正常了嘛~</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发现什么问题我会继续更新~ </p>
+<p>善用gpt，你能得到你想要的答案的。嘻嘻</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/" class="category-chain-item">开发的基础技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/git/" class="print-no-link">#git</a>
+      
+        <a href="/tags/github/" class="print-no-link">#github</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>git教程</div>
+      <div>http://example.com/2024/08/20/git教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>GarlicBa</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/21/%E5%BC%82%E5%BD%A2%EF%BC%9A%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/" title="异形：普罗米修斯">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">异形：普罗米修斯</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/19/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建">
+                        <span class="hidden-mobile">hexo博客搭建</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"StWSJQe2EBdFggyVEjAZSL0e-gzGzoHsz","appKey":"tk9rWYVaDo4nzIxKRjTBfTD5","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

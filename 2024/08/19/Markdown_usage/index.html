@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="GarlicBa">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Markdown使用教程Markdown是什么？Markdown是一种轻量级标记语言，可以让我们用简单的标记符号来编写简洁清爽的文档，并且可以很方便的转换成其他格式，比如html，pdf等等，方便分享。这篇文章就是用markdown写的 Markdown的优点 不是编程语言，语法非常简单，只需要记住几个符号就可以开始编写文档。不需要花很多时间学，一小时就足够。 Markdown可以很方便地转换为H">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown 使用教程">
+<meta property="og:url" content="http://example.com/2024/08/19/Markdown_usage/index.html">
+<meta property="og:site_name" content="GarlicBa的个人博客">
+<meta property="og:description" content="Markdown使用教程Markdown是什么？Markdown是一种轻量级标记语言，可以让我们用简单的标记符号来编写简洁清爽的文档，并且可以很方便的转换成其他格式，比如html，pdf等等，方便分享。这篇文章就是用markdown写的 Markdown的优点 不是编程语言，语法非常简单，只需要记住几个符号就可以开始编写文档。不需要花很多时间学，一小时就足够。 Markdown可以很方便地转换为H">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-2.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-3.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-4.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-6.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-7.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-8.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-9.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-10.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-12.png">
+<meta property="og:image" content="http://example.com/2024/08/19/Markdown_usage/image-13.png">
+<meta property="article:published_time" content="2024-08-19T10:43:07.000Z">
+<meta property="article:modified_time" content="2024-08-19T10:54:54.171Z">
+<meta property="article:author" content="GarlicBa">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="vscode">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2024/08/19/Markdown_usage/image.png">
+  
+  
+  
+  <title>markdown 使用教程 - GarlicBa的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"StWSJQe2EBdFggyVEjAZSL0e-gzGzoHsz","app_key":"tk9rWYVaDo4nzIxKRjTBfTD5","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>GarlicBa</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/1724070568747.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="markdown 使用教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-19 18:43" pubdate>
+          2024年8月19日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          19 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">markdown 使用教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Markdown使用教程"><a href="#Markdown使用教程" class="headerlink" title="Markdown使用教程"></a>Markdown使用教程</h1><h2 id="Markdown是什么？"><a href="#Markdown是什么？" class="headerlink" title="Markdown是什么？"></a>Markdown是什么？</h2><p>Markdown是一种轻量级标记语言，可以让我们用简单的标记符号来编写简洁清爽的文档，并且可以很方便的转换成其他格式，比如html，pdf等等，方便分享。这篇文章就是用markdown写的</p>
+<h3 id="Markdown的优点"><a href="#Markdown的优点" class="headerlink" title="Markdown的优点"></a>Markdown的优点</h3><ol>
+<li>不是编程语言，语法非常简单，只需要记住几个符号就可以开始编写文档。不需要花很多时间学，一小时就足够。</li>
+<li>Markdown可以很方便地转换为HTML、PDF等格式，方便分享和发布。</li>
+<li>用markdown写文档只是熟练度的问题，熟练之后，写文章超快，而且排版整洁美观，简洁清爽，比word好用多多。 （word用起来太烦了，反正我用不来word）</li>
+<li>像语雀、印象笔记等大部分笔记软件都支持markdown语法，可以方便的将笔记转移到另一个笔记软件。像github等也支持markdown语法。</li>
+<li>便于管理，不容易丢，只需对md文件进行copy保存，就能保证所有笔记的完整。</li>
+</ol>
+<h2 id="为什么推荐使用markdown？"><a href="#为什么推荐使用markdown？" class="headerlink" title="为什么推荐使用markdown？"></a>为什么推荐使用markdown？</h2><ol>
+<li>markdown就是专门记笔记用的，可以这么理解。基本大型的笔记软件都支持markdown语法，像typora（一款超好用的笔记软件）</li>
+<li>说实话，现在不用markdown会被<strong>歧视，看不起</strong>的，因为真的很普及。<blockquote>
+<p>这篇文章是我边学markdown边写的，因为周围人都在用，所有我觉得我也得学学qaq</p>
+</blockquote>
+</li>
+<li>不学也不行，因为周围人都在用，你看他们分享的资料全是markdown写的，要是纯看md文件，你看不懂qaq</li>
+<li>markdown确实好用，写笔记快。我有朋友用markdown写完再上传到hexo做个人博客的，好厉害#QAQ   我也想试试</li>
+</ol>
+<h2 id="Markdown基本用法"><a href="#Markdown基本用法" class="headerlink" title="Markdown基本用法"></a>Markdown基本用法</h2><p>可以这么说，markdown就是让你写文档，写文章的时候脱离鼠标，全身心把注意力放在键盘上。</p>
+<blockquote>
+<p>再看基本语法前，不如先找个markdown编辑器，比如typora，边学边写。<br>建议先跳到下面用vscode写markdown部分，等安装完插件后，再在vscode上实践语法，可以边学边写。</p>
+</blockquote>
+<hr>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>就是多个#+空格（下用space指代） </p>
+<p>几个#就是几级标题，比如：</p>
+<h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h3 id="段落换行"><a href="#段落换行" class="headerlink" title="段落换行"></a>段落换行</h3><p>直接enter即可<br>此外，空一行，或者多行渲染后的效果都是空一行。自己看着办</p>
+<hr>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>强调分两种，一种是 <em>斜体</em>,一种是 <strong>粗体</strong>。当然还有 <em><strong>粗斜体</strong></em><br><em>斜体</em>  一个下划线或者*，习惯后者</p>
+<h3 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h3><p>就是多个#+空格（下用space指代） </p>
+<p>几个#就是几级标题，比如：</p>
+<h3 id="三级标题-1"><a href="#三级标题-1" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题-1"><a href="#四级标题-1" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题-1"><a href="#五级标题-1" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题-1"><a href="#六级标题-1" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h3 id="段落换行-1"><a href="#段落换行-1" class="headerlink" title="段落换行"></a>段落换行</h3><p>直接enter即可</p>
+<blockquote>
+<p>但有时候没用，看编辑器的设定把</p>
+</blockquote>
+<p>此外，空一行，或者多行渲染后的效果都是空一行。自己看着办</p>
+<hr>
+<h3 id="强调-1"><a href="#强调-1" class="headerlink" title="强调"></a>强调</h3><p>强调分两种，一种是 <em>斜体</em>,一种是 <strong>粗体</strong>。当然还有 <em><strong>粗斜体</strong></em><br><em>斜体</em>  一个下划线或者<em>，习惯后者<br><strong>粗体</strong> 两个下划线或者</em>*</p>
+<blockquote>
+<p>注意：<br>斜体和粗体之间不能有空格，否则会渲染失败<br>*号前最好还是加个空格。</p>
+</blockquote>
+<hr>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>有序列表和无序列表，有序列表就是数字+点+空格，无序列表就是*+空格，或者-+空格，或者+空格。比如：</p>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<hr>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>有两种方法：</p>
+<ol>
+<li>把要用的图片放在和md一个文件夹下，然后直接写图片名即可，比如：<br> <code>![图片名称](imageFile.png)</code><blockquote>
+<p>图片名称是指放在鼠标放在图片上显示的字样，imageFile.png是指图片的文件名，注意图片名和文件名要一致，否则会找不到图片。</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="/2024/08/19/Markdown_usage/image.png" srcset="/img/loading.gif" lazyload alt="小熊"><br><em>小熊</em></p>
+<hr>
+<ol start="2">
+<li>如果下载了<code>Paste Image</code>插件，直接复制图片，然后在文档中，按<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>v</kbd>即可，会自动生成图片和图片链接。</li>
+</ol>
+<hr>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接可以连接到网上某个url网址，如果是下面这个语法：<br><code>[链接名称](url)</code></p>
+<blockquote>
+<p>链接名称是指鼠标放在链接上显示的字样，url是指链接的网址。</p>
+</blockquote>
+<p>例如我自己部分参考的markdown教程:<a target="_blank" rel="noopener" href="https://www.limfx.pro/ReadArticle/57/yi-zhong-xie-zuo-de-xin-fang-fa">点击这里  </a>对应的视频: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1si4y1472o/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=4e40ac6a40164558bbf4820dbba66ebc">点击这里</a></p>
+<p>此外，可以直接选中某个字，直接<kbd>ctrl</kbd>+<kbd>v</kbd>即可，会自动生成链接，例如：<br><img src="/2024/08/19/Markdown_usage/image-2.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<hr>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>句子前加&gt;，比如：<br><code>&gt;这是一段引用</code></p>
+<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+<hr>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>代码块有两种，一种是单行代码，一种是多行代码。</p>
+<ol>
+<li><p>行内代码，用&#96;&#96;括起来即可，比如：<br><code>这是一段行内代码</code></p>
+</li>
+<li><p>多行代码，用三个&#96;括起来即可，比如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">这是一段多行代码<br>这是一段多行代码<br>这是一段多行代码<br></code></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表格用|分割，比如：<br><img src="/2024/08/19/Markdown_usage/image-3.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年龄</th>
+<th>性别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>18</td>
+<td>男</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>19</td>
+<td>女</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>20</td>
+<td>男</td>
+</tr>
+</tbody></table>
+<hr>
+<p>另外还有个简单的玩法：<a target="_blank" rel="noopener" href="https://www.tablesgenerator.com/markdown_tables#">Markdown Tables Generator表格生抽器</a></p>
+<p>在这里你可以把word，excel里面的表格直接粘贴到网页中，然后生成对应的整齐的Markdown表格：<br><img src="/2024/08/19/Markdown_usage/image-4.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<hr>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>用—即可</p>
+<hr>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>用<code>~~删除线内容~~</code>即可，比如：<br><del>这是一段删除线</del></p>
+<hr>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>用<code>&lt;u&gt;这是一段下划线&lt;/u&gt;</code>即可，比如：<br><u>下划线内容</u></p>
+<hr>
+<p>当然，markdown还有很多其他的功能，例如集成LateX语法的公式等等，需要可以自行了解。</p>
+<p>如果想要了解公式，可参考<a target="_blank" rel="noopener" href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">这里</a></p>
+<h2 id="在vscode中使用markdown"><a href="#在vscode中使用markdown" class="headerlink" title="在vscode中使用markdown"></a>在vscode中使用markdown</h2><h3 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h3><p>vscode大家应该都知道，是一款非常强大的 <strong>编辑器</strong> ，对的。它 <strong>不是编程平台</strong> ，所以不要怕，它支持markdown语法，并且有很多插件，可以让我们的markdown编写文档更方便。<br>vscode下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">点击这里</a>  一路安装next即可</p>
+<h3 id="安装相关的插件"><a href="#安装相关的插件" class="headerlink" title="安装相关的插件"></a>安装相关的插件</h3><p>运行vscode后，点击左侧的插件市场，搜索插件名称，点击安装，即可使用：<br><img src="/2024/08/19/Markdown_usage/image-6.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a> 方便在vsocde中编写markdown文档</li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf">Markdown PDF</a>可将markdown文档转换为pdf格式，便于看不懂markdown语法的人看</li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a>  markdown预览插件，支持很多功能，比如数学公式，代码高亮等等</li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image">Paste Image</a> 可支持将照片直接粘贴进markdown，极大简化编写。</li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a> 检查拼写错误，防止打错字，主要检查的是英文单词</li>
+</ol>
+<h3 id="建立你的文库和第一篇文章"><a href="#建立你的文库和第一篇文章" class="headerlink" title="建立你的文库和第一篇文章"></a>建立你的文库和第一篇文章</h3><ol>
+<li><p>首先你要建立一个 <strong>仓库</strong> 用来存放你所有的文章，这样你的文章就不会丢了。这个非常简单，在你的 <strong>硬盘上建个文件夹</strong> ，就结束了，对就这么简单，以后你所有的文章都放在这个文件夹中，要备份的话只要复制这个文件夹就可以复制你所有的文章了。</p>
+</li>
+<li><p>创建你的第一篇文章：</p>
+<ol>
+<li>用vscode打开这个文件夹（可以在资源管理器中选择打开文件夹），即 <strong>MYFLOGS</strong></li>
+<li>在这个文件夹下面创建一个子文件夹，起个名字，即 <strong>MarkDown_Usage</strong></li>
+<li>再这个文件夹下面创建一个文件，扩展名是md,即 <strong>usage.md</strong> 每一篇文章就是一个文件夹，用在该md文章的图片也放在该文件夹同一目录下：</li>
+</ol>
+</li>
+</ol>
+<p><img src="/2024/08/19/Markdown_usage/image-7.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<ol start="3">
+<li>写作时，记得经常保存，这是个好习惯，快捷键<code>ctrl</code>+<code>s</code> 当然系统也会提示</li>
+</ol>
+<h3 id="如何预览markdown格式"><a href="#如何预览markdown格式" class="headerlink" title="如何预览markdown格式"></a>如何预览markdown格式</h3><h4 id="可以打开分屏浏览："><a href="#可以打开分屏浏览：" class="headerlink" title="可以打开分屏浏览："></a>可以打开分屏浏览：</h4><p> <img src="/2024/08/19/Markdown_usage/image-8.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<h4 id="进入zen-mode模式，即沉浸式写代码"><a href="#进入zen-mode模式，即沉浸式写代码" class="headerlink" title="进入zen mode模式，即沉浸式写代码"></a>进入zen mode模式，即沉浸式写代码</h4><p>快捷键：<code>ctrl</code>+<code>k</code>,松开后，再按<code>z</code>,即可进入。两下<code>esc</code>即可退出<br><img src="/2024/08/19/Markdown_usage/image-9.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><em>非zen mode</em><br><img src="/2024/08/19/Markdown_usage/image-10.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><em>zen mode</em></p>
+<h3 id="写完后生成目录"><a href="#写完后生成目录" class="headerlink" title="写完后生成目录"></a>写完后生成目录</h3><p>快捷键：<code>ctrl</code>+<code>shift</code>+<code>p</code>，输入<code>Create Table of Content</code>，回车即可生成目录:(不知道为什么有点丑陋)<br><img src="/2024/08/19/Markdown_usage/image-12.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><img src="/2024/08/19/Markdown_usage/image-13.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<hr>
+<p>至此，你已经学会了如何在vscode中编写markdown文档了，是不是很简单呢？后续可转为pdf等等.</p>
+<blockquote>
+<p>当然，在vscode中编写的md文件，可以用其他任何支持markdown语法的编辑器打开，比如typora，所渲染的内容完全一样，笔记转移很方便~</p>
+</blockquote>
+<hr>
+<h3 id="用typora写markdown"><a href="#用typora写markdown" class="headerlink" title="用typora写markdown"></a>用typora写markdown</h3><p>当然，如果你觉得vscode的markdown预览功能太弱，你可以试试typora，一款非常强大的markdown编辑器，不用像vscode那样写完要打开预览页面查看，而是 <strong>实时渲染</strong> ，真正实现所见即所得。<br>但是,现在已经 <strong>收费</strong> 了#QAQ (可以找找破解版qaq,富哥另说)</p>
+<blockquote>
+<p>大部分人都用typora来记笔记,但是当字数过多后,typora会发生卡顿(听说),但好评还是很高的.<br>想要学习的话,可以参考<a target="_blank" rel="noopener" href="https://github.com/Sakiyary/Markdown-Typora-VSCode-Doc?tab=readme-ov-file">这里</a><br>还有<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hG411p7fX/?spm_id_from=333.337.top_right_bar_window_history.content.click&vd_source=4e40ac6a40164558bbf4820dbba66ebc">参考视频</a></p>
+</blockquote>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此,基本的markdown写作你已经会了,要用好这些工具,提高自己的生产效率.<em><strong>加油打工人!</strong></em></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%BC%80%E5%8F%91%E7%9A%84%E5%9F%BA%E7%A1%80%E6%8A%80%E8%83%BD/" class="category-chain-item">开发的基础技能</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+      
+        <a href="/tags/vscode/" class="print-no-link">#vscode</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>markdown 使用教程</div>
+      <div>http://example.com/2024/08/19/Markdown_usage/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>GarlicBa</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/19/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">hexo博客搭建</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/19/%E9%99%A2%E7%A7%91%E5%8D%8F%E5%85%8D%E8%AF%95%E9%A2%98/" title="java方向免试题">
+                        <span class="hidden-mobile">java方向免试题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"StWSJQe2EBdFggyVEjAZSL0e-gzGzoHsz","appKey":"tk9rWYVaDo4nzIxKRjTBfTD5","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
