@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>计算机概论</title>
+    <link href="/2024/08/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%AE%BA/"/>
+    <url>/2024/08/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%AE%BA/</url>
+    
+    <content type="html"><![CDATA[<h1 id="计算机概论"><a href="#计算机概论" class="headerlink" title="计算机概论"></a>计算机概论</h1><ol><li><p>计算机硬件部分包括输入单元，主机部分，输出单元三部分。</p></li><li><p>主机主要部分为CPU与内存。CPU分为算数逻辑单元与控制单元，负责核心运算与判断。</p><blockquote><p>数据传输方向：输入单元–&gt;内存–&gt;CPU–&gt;内存–&gt;输出单元</p><p>即所有数据都要经过内存传输，内存容量加大，支持数据告诉缓存，可增大系统性能。</p><p><strong>内存不足，性能会很糟糕</strong></p></blockquote></li><li><p>即主要分为五部分：输入单元、输出单元、CPU内部的算数逻辑单元、控制单元与内存。</p></li></ol><hr><h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><ol><li><p>CPU的位数指CPU一次数据读取的最大量。64位CPU代表CPU一次可以读写64bits这么多的数据。</p></li><li><p>不同的x86架构的CPU有什么差异呢？</p><blockquote><p>除了CPU的整体结构，还有的就是微指令集的不同。先进的微指令集可大幅度提高效率和性能。</p></blockquote></li></ol><hr><p><img src="/2024/08/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%AE%BA/1724332844966.png" alt="1724332844966"></p><p><em>各部分在人体中的映射</em></p><ol start="5"><li><p>内存是处理当下就要处理的数据，而硬盘充当备忘录，把不用的东西先存放起来，需要的时候再回忆取用。</p></li><li><p>CPU的运算速度常用 MHz 或者是 GHz 之类的单位。</p><blockquote><p>在网络传输方面，由于网络使用的是 bit 为单位，因此网络常使用的单位为 Mbps 是 Mbits per second，亦即是每秒多少<br>Mbit。</p></blockquote></li><li><p>CPU 的频率可衡量CPU性能。</p><blockquote><p>频率就是CPU每秒钟可以进行的工作次数。 所以频率越高表示这颗CPU单位时间内可以作更多的事情。</p></blockquote></li><li><p>GPU,一个3D加速芯片</p><blockquote><p>显卡的一些3D的运算早期是交给CPU去运行的，但是CPU并非完全针对这些3D来进行设计的，而且CPU平时已经非常忙碌了呢！ 所以后来显卡厂商直接在显卡上面嵌入一个3D加速的芯片，即为GPU.</p></blockquote></li><li><p>操作系统（OS）其实是一组程序， 这组程序的重点在于<strong>管理电脑的所有活动以及驱动系统中的所有硬件</strong>。</p></li><li><p>操作系统核心关键管控硬件与提供相关的能力。</p><blockquote><p>只有核心有提供的功能，你的电脑系统才能帮你完成！</p></blockquote></li><li><p><strong>操作系统起始就是核心与其提供的接口工具</strong> </p><p><strong>总结：上层应用通过接口控制核心 管理硬件</strong></p><p>电脑系统主要由硬件构成，操作系统的核心程序负责管理硬件。</p><blockquote><p>操作系统的核心层直接参考硬件规格写成。</p></blockquote><p>上头还需有应用程序的提供，使用者才能操作系统。所以除了核心程序，操作系统还会提供一整组开发接口（系统调用层）。</p><blockquote><ul><li><p>即工程师只需根据接口参数开发软件，软件就能在核心上头运行。</p></li><li><p>软件与核心关系很大，与硬件关系不大。硬件也与核心关系较大。</p></li></ul></blockquote></li></ol><hr><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/index.html">鸟哥的linux私房菜</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux学习</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>异形：契约</title>
     <link href="/2024/08/21/%E5%BC%82%E5%BD%A2%EF%BC%9A%E5%A5%91%E7%BA%A6/"/>
     <url>/2024/08/21/%E5%BC%82%E5%BD%A2%EF%BC%9A%E5%A5%91%E7%BA%A6/</url>
